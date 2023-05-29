@@ -3,7 +3,7 @@ $(document).ready(function() {
     let slideAtual = 1;
     let listaSlides = ["banner-f1", "banner-cs", "banner-lol"]
 
-    setInterval(mudarSlide, 1500) //1500 ms milesegundos
+    setInterval(mudarSlide, 1500)
 
     function mudarSlide() {
         console.log("Slide atual:", slideAtual);
@@ -24,24 +24,23 @@ $(document).ready(function() {
         if(slideAtual > (listaSlides.length) - 1) {
             slideAtual = 0;
         }
+
     }
+    
+    $("#barras").click(function() {
+
+        $("#menu").toggleClass("menu-ativo");
+        
+        // Toggle
+        // if( $("#menu").hasClass("menu-ativo") ) {
+        //     $("#menu").removeClass("menu-ativo")
+        // } else {
+        //     $("#menu").addClass("menu-ativo")
+        // }
+
+    })
 
 })
-
-
-// $("#barras").click(function() {
-
-//     $("#menu").toggleClass("menu-ativo");
-    
-//     // Toggle
-//     if( $("#menu").hasClass("menu-ativo") ) {
-//         $("#menu").removeClass("menu-ativo")
-//     } else {
-//         $("#menu").addClass("menu-ativo")
-//     }
-// })
-
-
 
 function mostrarMenu() {
     let menu = document.getElementById("menu")
